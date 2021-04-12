@@ -1,1 +1,1 @@
-# how-to-install
+# How to install FreeBSD, NetBSD
