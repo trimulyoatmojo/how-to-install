@@ -1,0 +1,34 @@
+# pkgin update
+# pkgin upgrade
+# pkgin install bash nano
+# bash
+# pkgin install xfce4 xfce4-desktop fam tdb gvs xfce4-thunar hal
+# pwd
+	harus return /root
+# nano .xinitrc
+	add:
+	xfce4-session
+# ln -s .xinitrc .xsession
+# ls -al
+# cp .xinitrc /home/tri/
+# chown tri:wheel /home/tri/.xinitrc
+# ln -s /home/tri/.xinitrc /home/tri/.xsession
+# cp /usr/pkg/share/examples/rc.d/famd /etc/rc.d/
+# cp /usr/pkg/share/examples/rc.d/dbus /etc/rc.d/
+# cp /usr/pkg/share/examples/rc.d/hal /etc/rc.d/
+# nano /etc/rc.conf
+	add in the bottom:
+	rpcbind=YES
+	dbus=YES
+	hal=YES
+	famd=YES
+# pkgin install firefox filezilla mozilla-fonts
+# pkgin install open-vm-tools
+# pkgin install xf86-video-vmware xf86-input-vmmouse
+# cp /usr/pkg/share/examples/rc.d/vmtools /etc/rc.d/vmtools
+# nano /etc/rc.conf
+	add:
+	vltools=YES
+# reboot
+
+#startx
