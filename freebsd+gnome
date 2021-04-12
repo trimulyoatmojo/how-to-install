@@ -1,0 +1,47 @@
+# pkg update
+# pkg upgrade
+# pkg install bash nano sudo
+# nano /usr/local/etc/sudoers
+	edit add:
+	roor ALL=(ALL) ALL
+	// this line
+	tri ALL=(ALL) ALL
+# pkg install xorg
+# nano /etc/fstab
+	edit add:
+	proc           /proc       procfs  rw  0   0
+# pkg install gnome3
+# nano /etc/rc.conf
+	edit add:
+	dbus_enable="YES"
+	hald_enable="YES"
+	sddm_enable="YES"
+	
+	moused_enable="YES"
+	gnome_enable="YES"
+# pkg install firefox filezilla libreoffice
+# pkg install freebsd-8k-wallpapers
+# pkg install open-vm-tools
+# pkg install xf86-video-vmware xf86-input-vmmouse
+
+# pwd
+	harus mengembalikan /root
+
+# Xorg -configure
+
+# ls 
+	harus mengembalikan ada file xorg.conf.new
+
+# cp xorg.conf.new /etc/X11/xorg.conf
+# nano /etc/X11/xorg.conf
+	edit add:
+	Section "ServerLayout"
+		...
+		Option	"AutoAddDevices" "Off"
+	EndSection
+		
+	Section "InputDevice"
+		Driver	"mouse" 	edit > 		Driver "vmmouse"
+	EndSection
+		
+# reboot
