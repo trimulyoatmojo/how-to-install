@@ -1,13 +1,9 @@
-##Lakukan
-```
 # pkg update
 # pkg upgrade
 # pkg install bash nano sudo
 # nano /usr/local/etc/sudoers
-```
-
 	edit add:
-	roor ALL=(ALL) ALL
+	root ALL=(ALL) ALL
 	// this line
 	tri ALL=(ALL) ALL
 # pkg install xorg
