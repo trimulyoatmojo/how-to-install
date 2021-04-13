@@ -1,0 +1,63 @@
+# fdisk -l
+# cfdisk /dev/sda
+	select > dos
+	new 1G, bootable type
+	swap
+	root
+# mkfs.ext4 /dev/sda1
+# mkswap /dev/sda2
+# swapon /dev/sda2
+# mkfs.ext4 /dev/sda3
+# mount /dev/sda3 /mnt
+# mkdir /mnt/boot /mnt/var /mnt/home
+# mount /dev/sda1 /mnt/boot
+# ping -c 3 google.com
+	harus terkoneksi
+# pacman -Syy
+# pacstrap /mnt base base-devel linux limux-firmware nano dhcpcd net-tools grub
+# genfstab -U /mnt >> /mnt/etc/fstab
+# arch-chroot /mnt
+# nano /etc/local.gen
+	enable us time
+# locale-gen
+# echo LANG=en_US.UTF-8 > /etc/locale.conf
+# export LANG=en_US.UTF-8
+# ls /usr/share/zoneinfo
+# ls /usr/share/zoneinfo/America
+# ln -s /usr/share/zoneinfo/America/New_York /etc/localtime
+# hwclock --systoch --utc
+# echo arch2020 > /etc/hostname
+# systemctl enable dhcpcd
+# pacman -S openssh
+# passwd root
+	input pass
+# useradd -m -g users -G wheel -s /bin/bash tri
+# passwd tri 
+	input pass
+# nano /etc/sudoers
+	root ALL=(ALL) ALL
+	tri ALL=(ALL) ALL
+# grub install /dev/sda
+# grub-mkconfig -o /boot/grub/grub.cfg
+# mkinitcpio -p linux
+# exit
+# umount /mnt/boot
+# umount /mnt
+# reboot
+
+
+# root
+	input pass
+# hostnamectl
+# ifconfig
+# ping -c 3 google.com
+# pacman -S xorg
+# pacman -S gnome gnome-extra
+# systemctl enable gdm
+# systemctl enable NetworkManager
+# pacman -S firefox vlc gimp libreoffice archlinux-wallpaper
+# pacman -S gtkmm
+# pacman -S open-vm-tools
+# pacman -S xf86-video-vmware xf86-input-vmmouse
+# systemctl enable vmtoolsd
+# reboot
