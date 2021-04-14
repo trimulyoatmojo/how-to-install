@@ -17,7 +17,7 @@
 # pacstrap /mnt base base-devel linux limux-firmware nano dhcpcd net-tools grub
 # genfstab -U /mnt >> /mnt/etc/fstab
 # arch-chroot /mnt
-# nano /etc/local.gen
+# nano /etc/locale.gen
 	enable us time
 # locale-gen
 # echo LANG=en_US.UTF-8 > /etc/locale.conf
@@ -25,7 +25,7 @@
 # ls /usr/share/zoneinfo
 # ls /usr/share/zoneinfo/America
 # ln -s /usr/share/zoneinfo/America/New_York /etc/localtime
-# hwclock --systoch --utc
+# hwclock --systohc --utc
 # echo arch2020 > /etc/hostname
 # systemctl enable dhcpcd
 # pacman -S openssh
