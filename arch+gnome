@@ -1,3 +1,4 @@
+PASANG OS
 # fdisk -l
 # cfdisk /dev/sda
 	buat bootable 100M, root, swap
@@ -48,3 +49,9 @@ PASANG GNOME
 # pacman -S firefox vlc gimp libreoffice archlinux-wallpaper
 # pacman -S gtkmm
 # reboot
+
+
+REFFERENSI
+https://wiki.archlinux.org/title/Installation_guide
+https://www.youtube.com/watch?v=kmGja4A02n4&t=651s
+https://phoenixnap.com/kb/arch-linux-install
